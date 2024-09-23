@@ -6,19 +6,19 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FFF;
-    width: 100%; /* Change from 90% to 100% */
-    max-width: 100%; /* Change from 2030px to 100% */
+    width: 100%;
+    max-width: 100%;
     height: auto;
     position: relative;
-    overflow-x: hidden; /* Add this to prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 .main-container {
-    width: 100%; /* Change from 90% to 100% */
+    width: 100%;
     max-width: 2030px;
     margin: 0 auto;
     position: relative;
-    overflow-x: hidden; /* Add this to prevent horizontal scrolling */
+    overflow-x: visible; /* Change to visible to allow full-width sections */
 }
 
 .background-image {
@@ -59,9 +59,10 @@ body::after {
 }
 
 .navbar {
+    position: fixed;
     width: 90%;
     max-width: 2000px; /* Max width so the navbar doesn't get too wide */
-    height: 85px;
+    height: 80px;
     border-radius: 20px;
     background: rgba(251, 208, 124, 0.20);
     backdrop-filter: blur(10px);
@@ -71,6 +72,8 @@ body::after {
     padding: 10px;
     margin: 40px auto; /* Center the navbar horizontally */
     font-family: 'Plus Jakarta Sans', sans-serif;
+    opacity: 80%;
+    z-index: 3;
 }
 
 .chronicles-logo-nav {
@@ -117,6 +120,7 @@ body::after {
     text-align: center;      /* Center text for both title and description */
     padding: 20px;          /* Optional: Add some padding */
     margin-bottom: 162px;
+    margin-top: 200px;
 }
 
 .cta-title {
@@ -193,12 +197,120 @@ body::after {
 .partner-image {
     display: flex;
     justify-content: center;
-    gap: 5%; /* Use percentage for gap */
+    gap: 10%; /* Use percentage for gap */
     margin-top: 166px;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    margin-bottom: 80px;
 }
 
 .partner-image img {
-    max-width: 30%; /* Limit the size of each partner image */
+    max-width: 100%; /* Limit the size of each partner image */
     height: auto;
+}
+
+.about-section {
+    width: 100vw; 
+    max-width: none; 
+    height: 735px;
+    flex-shrink: 0;
+    background: linear-gradient(104deg, rgba(251, 208, 124, 0.30) 0.51%, rgba(250, 147, 114, 0.30) 99.49%);
+    box-sizing: border-box;
+    margin-left: calc(-50vw + 50%); 
+}
+
+.about-chronicles {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.chronicles-about-section {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background: linear-gradient(90deg, #FFC450 0%, #E59D10 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-section {
+    width: 100vw;
+    max-width: none;
+    height: 735px;
+    background: linear-gradient(104deg, rgba(251, 208, 124, 0.30) 0.51%, rgba(250, 147, 114, 0.30) 99.49%);
+    box-sizing: border-box;
+    margin-left: calc(-50vw + 50%);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.about-chronicles {
+    color: #FFF;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    left: 15%; /* Position at 1/4 of the section width */
+    transform: translateX(-50%); /* Center the text block */
+    text-align: left;
+    margin: 0;
+}
+
+.chronicles-about-section {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background: linear-gradient(90deg, #FFC450 0%, #E59D10 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+}
+
+.about-container {
+    width: 992px;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 10px solid var(--Gradient-Primary, #FBD07C);
+    background: #FFF;
+}
+
+.text-about-bold {
+    font-weight: bold;
+}
+
+.about-text-container {
+    width: 688px;
+    color: rgba(0, 0, 0, 0.70);
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.about-button {
+    width: 219px;
+    height: 63px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--Gradient-Primary, linear-gradient(100deg, #FBD07C 0%, #FA9372 100%));
+    color: #FFF;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }

@@ -60,6 +60,9 @@ body::after {
 
 .navbar {
     position: fixed;
+    top: 20px; /* Position the navbar 20px from the top */
+    left: 50%; /* Align it to the center horizontally */
+    transform: translateX(-50%); /* Center it perfectly using transform */
     width: 90%;
     max-width: 2000px; /* Max width so the navbar doesn't get too wide */
     height: 80px;
@@ -70,11 +73,11 @@ body::after {
     align-items: center;
     justify-content: space-between; /* Space between logo and nav links */
     padding: 10px;
-    margin: 40px auto; /* Center the navbar horizontally */
     font-family: 'Plus Jakarta Sans', sans-serif;
     opacity: 80%;
     z-index: 3;
 }
+
 
 .chronicles-logo-nav {
     width: 260px;

@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+    width: 100%; /* Change from 90% to 100% */
+    max-width: 100%; /* Change from 2030px to 100% */
+    height: auto;
+    position: relative;
+    overflow-x: hidden; /* Add this to prevent horizontal scrolling */
+}
+
+.main-container {
+    width: 100%; /* Change from 90% to 100% */
+    max-width: 2030px;
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden; /* Add this to prevent horizontal scrolling */
+}
+
+.background-image {
+    position: fixed;
+    max-width: 100%;
+    top: 50%;          /* Center it vertically */
+    left: 50%;         /* Center it horizontally */
+    width: 100%;       /* Make it responsive */
+    height: auto;      /* Maintain aspect ratio */
+    transform: translate(-50%, -50%); /* Center it */
+    z-index: -1;        /* Send it behind other content */
+}
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    width: 40vw;
+    height: 40vw;
+    max-width: 604.8px;
+    max-height: 604.8px;
+    border-radius: 50%;
+    background: linear-gradient(100deg, rgba(251, 208, 124, 0.30) 0%, rgba(250, 147, 114, 0.30) 100%);
+    filter: blur(180px);
+    z-index: -1;
+}
+
+body::before {
+    left: -20vw; /* Show part of the circle on the left */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+body::after {
+    right: -20vw; /* Show part of the circle on the right */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar {
+    width: 90%;
+    max-width: 2000px; /* Max width so the navbar doesn't get too wide */
+    height: 85px;
+    border-radius: 20px;
+    background: rgba(251, 208, 124, 0.20);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and nav links */
+    padding: 10px;
+    margin: 40px auto; /* Center the navbar horizontally */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.chronicles-logo-nav {
+    width: 260px;
+    height: auto; /* Change to auto to maintain aspect ratio */
+}
+
+.nav__menu {
+    display: flex;
+    gap: 20px; /* Add some space between the links */
+}
+
+.nav-section {
+    color: rgba(0, 0, 0, 0.70);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 28px;
+    transition: color 0.3s ease, font-size 0.3s ease; 
+}
+
+.active-nav {
+    color: #FFF; /* Active text color */
+    font-size: 20px; /* Active font size */
+    background: rgba(0, 0, 0, 0.70);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.home-content {
+    display: flex; /* Enable flexbox for the home content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack children vertically */
+    padding: 20px; /* Optional padding */
+}
+
+.call-to-action {
+    display: flex;           /* Enable flexbox */
+    flex-direction: column;  /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center;     /* Center horizontally */
+    text-align: center;      /* Center text for both title and description */
+    padding: 20px;          /* Optional: Add some padding */
+    margin-bottom: 162px;
+}
+
+.cta-title {
+    width: 838px;
+    color: rgba(0, 0, 0, 0.70);
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.cta-desc {
+    max-width: 688px; /* Change width to max-width */
+    width: 100%; /* Add this to make it responsive */
+    color: rgba(0, 0, 0, 0.70);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cta-title, .cta-desc {
+    max-width: 838px; /* Change width to max-width */
+    width: 100%; /* Add this to make it responsive */
+}
+
+.cta-button {
+    width: 312px;
+    height: 75px;
+    margin-top: 59px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    border: 6px solid rgba(255, 255, 255, 0.50);
+    background: linear-gradient(100deg, #FBD07C 0%, #F98661 100%);
+    box-shadow: 0px 439px 123px 0px rgba(0, 0, 0, 0.00), 
+                0px 281px 112px 0px rgba(0, 0, 0, 0.01), 
+                0px 158px 95px 0px rgba(0, 0, 0, 0.05), 
+                0px 70px 70px 0px rgba(0, 0, 0, 0.09), 
+                0px 18px 39px 0px rgba(0, 0, 0, 0.10);
+    color: rgba(0, 0, 0, 0.70);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    backdrop-filter: blur(10px);
+    cursor: pointer;   
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+.home-image {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden; /* Add this to prevent image overflow */
+}
+
+.home-image img {
+    width: 100%;
+    height: auto;
+    display: block; /* Add this to remove any extra space below the image */
+}
+
+.partner-image {
+    display: flex;
+    justify-content: center;
+    gap: 5%; /* Use percentage for gap */
+    margin-top: 166px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.partner-image img {
+    max-width: 30%; /* Limit the size of each partner image */
+    height: auto;
+}
